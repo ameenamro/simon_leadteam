@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>recap</title>
+    <link rel="stylesheet" href="murrar.css">
+</head>
+<body>
+    <form id="loginForm">
+        <p style="display: none;" id="inValidMessage">Email and password are not valid.</p>
+        <label for="email">Email:</label>
+        <input type="text" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <label for="isAdmin">Are you admin?</label>
+        <input type="checkbox" id="isAdmin">
+        <br>
+        <button type="submit">Login</button>
+        <button id="registerButton" type="button">Register</button>
+    </form>
+<form style="display: none;" id="registerForm" class="registerForm" action="">
+    <label  for="name">Name:</label>
+    <input type="text" name="registerName" id="registerName">
+
+    <label  for="email">Email:</label>
+    <input type="email" name="registerEmail" id="registerEmail">
+
+    <label  for="Password">Password:</label>
+    <input type="password" name="registerPassword" id="registerPassword">
+
+    <label  for="Password">Conformation Password:</label>
+    <input type="password" name="registerConPassword" id="registerConPassword">
+    <button id="registerSubmit">Submit</button>
+</form>
+    <button id="logoutButton" style="display: none;">Logout</button>
+
+    <script src="murrar.js"></script>
+</body>
+</html>

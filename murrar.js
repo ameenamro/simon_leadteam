@@ -12,7 +12,6 @@ loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const isAdmin = document.getElementById("isAdmin").checked;
     const validEmail = "example@example.com";
     const validPassword = "123";
     const inValidMessage = document.getElementById("inValidMessage");
@@ -20,7 +19,7 @@ loginForm.addEventListener("submit", function (event) {
     if (email === validEmail && password === validPassword) {
         const user = {
             email: email,
-            isAdmin: isAdmin
+            password: password
         };
         localStorage.setItem("user", JSON.stringify(user));
         document.getElementById("loginForm").style.display = "none";
@@ -33,7 +32,7 @@ loginForm.addEventListener("submit", function (event) {
 
 registerForm.addEventListener("submit", function (event) {
     event.preventDefault(); 
-    alert(`Registration Successful!\nName: ${registerName}\nEmail: ${registerEmail}`);
+    alert(`Registration Successful!`);
     registerForm.style.display = "none";
     loginForm.style.display = "block";
 

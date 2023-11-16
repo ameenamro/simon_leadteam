@@ -1,4 +1,4 @@
-body {
+#loginAndRegisterForm {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
     margin: 0;
@@ -38,13 +38,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-#isAdmin{
-    position: absolute;
-    width: 230px;
-    margin-top:-0.90rem;
-    margin-left: 1rem;
-    accent-color: #2a2a2a;
-}
+
 button {
     width: 115%;
     background-color: #2a2a2a;

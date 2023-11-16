@@ -58,15 +58,15 @@
   border-bottom: black solid 1px;
 }
 
-#search-section>#search{
+#search-section #search{
   border: none;
   width: 80px;
   padding: 5px 0px;
 }
-#search-section>#search:focus{
+#search-section #search:focus{
   outline: none;
 }
 
-body{
-  background-color: aqua;
+.diplay-none{
+  display: none;
 }

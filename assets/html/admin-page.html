@@ -50,6 +50,34 @@
   </nav>
 
   <main>
+
+    <section id="add-product-container">
+      <h2>Create New Product</h2>
+      <form>
+        <label for="name">
+          Name:
+          <input type="text" name="name" id="name" required>
+        </label>
+       
+        <label for="price">
+          Price ($):
+          <input type="number" name="price" id="price" value="10" min="1" required>
+        </label>
+        
+        <label for="rating">
+          Rating:
+          <input type="number" name="rating" id="rating" value="4" min="0" max="5" required>
+        </label>
+
+        <label for="imageURL">
+          Image URL:
+          <input type="url" name="imageURL" id="imageURL" required>
+        </label>
+
+        <button type="submit">Create Product</button>
+      </form>
+    </section>
+
     <section id="products-container">
       <h2>Products:-</h2>
       <section id="list-of-products" class="flex-column">

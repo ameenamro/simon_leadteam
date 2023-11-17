@@ -1,7 +1,12 @@
 //TO DO: CHECK IF LOGGED IN USER IS ADMIN, THEN DISPLAY THIS STUFF.
+//IF NOT LOGGED IN AS ADMIN REDIRECT TO INDEX.HTML IMMEDIATLEY
 
 //Selecting DOM Elements
 const productsList = document.querySelector("#list-of-products");
+const newProductForm = document.querySelector("#new-product-form");
+
+//adding event listeners
+newProductForm.addEventListener("submit", createProductClicked);
 
 const productsAPIUrl = 'https://65572f1fbd4bcef8b612350d.mockapi.io/shoestore'
 
@@ -126,6 +131,47 @@ async function deleteProductClicked(event){
     const result = await response.json();
     console.log(result);
     fetchProducts(productsAPIUrl);
+  } catch (error){
+    console.error(error);
+  }
+}
+
+//creates product and sends it to the database
+async function createProductClicked(event){
+  event.preventDefault();
+
+  const target = event.target;
+
+  console.log(target.description.value);
+
+  try{
+
+    const newProduct = {
+      name: target.name.value,
+      price: target.price.value,
+      rating: target.rating.value,
+      image: target.imageURL.value,
+      description: target.description.value
+    }
+
+    console.log(newProduct);
+
+    const response = await fetch(productsAPIUrl + "/product", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }, 
+      body: JSON.stringify(newProduct),
+    });
+
+    console.log(response.status);
+    const result = await response.json();
+    console.log(result);
+
+    fetchProducts(productsAPIUrl);
+
+    newProductForm.reset();
+
   } catch (error){
     console.error(error);
   }

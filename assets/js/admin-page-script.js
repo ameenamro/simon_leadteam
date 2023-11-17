@@ -99,6 +99,7 @@ function displayProducts(products){
     deleteButton.id = product.id;
     deleteButton.textContent = "Delete";
     productCard.append(deleteButton);
+    deleteButton.addEventListener("click", deleteProductClicked);
  
   });
 
@@ -108,5 +109,24 @@ function displayProducts(products){
 function clearChildren(element){
   while(element.children.length>0){
     element.firstChild.remove();
+  }
+}
+
+//trys to delete the product from the database
+async function deleteProductClicked(event){
+  const targetID = event.target.id;
+
+  console.log(`Delete ${targetID}`);
+
+  try {
+    const response = await fetch(productsAPIUrl+`/product/${targetID}`, {
+      method: "DELETE",
+    });
+    console.log(response.status);
+    const result = await response.json();
+    console.log(result);
+    fetchProducts(productsAPIUrl);
+  } catch (error){
+    console.error(error);
   }
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin-page-style.css">
+</head>
+
+<body>
+
+  <nav id="navbar" class="flex-row">
+
+    <h1>Tote Shoes</h1>
+
+    <section id="links-section" class="flex-row">
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+    </section>
+
+    <section id="search-user-cart-section" class="flex-row">
+      <section id="search-section" class="flex-row">
+        <form class="flex-row">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="search" id="search" placeholder="Search...">
+        </form>
+      </section>
+
+      <section id="user-section" class="flex-row clickable-section">
+        <i class="fa-solid fa-user"></i>
+        <p>Login</p>
+      </section>
+      <section id="user-section" class="flex-row clickable-section diplay-none">
+        <i class="fa-solid fa-user"></i>
+        <p>Name</p>
+      </section>
+
+      <section id="cart-section" class="flex-row clickable-section">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>0</p>
+      </section>
+
+    </section>
+
+
+  </nav>
+
+  <main>
+    <section id="products-container">
+      <h2>Products:-</h2>
+      <section id="list-of-products" class="flex-column">
+        <!-- <section class="product-card">
+          <img class="product-img-small" src="https://naboly.ps/wp-content/uploads/2022/12/135-2.png" alt="">
+          <table>
+            <tr>
+              <th>Name</th>
+              <td>Naboli Sandal</td>
+            </tr>
+            <tr>
+              <th>Price ($)</th>
+              <td>15.3</td>
+            </tr>
+            <tr>
+              <th>Rating (X/5)</th>
+              <td>4.3</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla deleniti magni facere a maxime molestiae
+                assumenda, doloremque saepe cumque exercitationem!</td>
+            </tr>
+          </table>
+  
+          <button>Edit</button>
+          <button>Delete</button>
+          
+        </section> -->
+      </section>
+    </section>
+  </main>
+
+  <script src="../js/admin-page-script.js"></script>
+</body>
+
+</html>

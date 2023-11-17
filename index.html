@@ -5,9 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/857ffcdc80.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  
+  <nav id="navbar" class="flex-row">
 
+    <h1>Tote Shoes</h1>
+
+    <section id="links-section" class="flex-row">
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+    </section>
+
+    <section id="search-user-cart-section" class="flex-row">
+      <section id="search-section" class="flex-row">
+        <form  class="flex-row">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="search" id="search" placeholder="Search...">
+        </form>
+      </section>
+
+      <section id="user-section" class="flex-row clickable-section">
+        <i class="fa-solid fa-user"></i>
+        <p>Login</p>
+      </section>
+      <section id="user-section" class="flex-row clickable-section diplay-none">
+        <i class="fa-solid fa-user"></i>
+        <p>Name</p>
+      </section>
+
+      <section id="cart-section" class="flex-row clickable-section">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>0</p>
+      </section>
+
+    </section>
+
+
+  </nav>
 
   <script src="./assets/js/script.js"></script>
 </body>

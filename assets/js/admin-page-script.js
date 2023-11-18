@@ -4,6 +4,11 @@
 //Selecting DOM Elements
 const productsList = document.querySelector("#list-of-products");
 const newProductForm = document.querySelector("#new-product-form");
+const editFormContainer = document.querySelector("#edit-form-container");
+editFormContainer.remove();
+
+// document.body.append(editFormContainer)
+
 
 //adding event listeners
 newProductForm.addEventListener("submit", createProductClicked);
@@ -98,6 +103,7 @@ function displayProducts(products){
     editButton.id = product.id;
     editButton.textContent = "Edit";
     productCard.append(editButton);
+    editButton.addEventListener("click", () => editButtonClicked(product));
     
     //Delete Button
     const deleteButton = document.createElement("button");
@@ -173,6 +179,70 @@ async function createProductClicked(event){
     newProductForm.reset();
 
   } catch (error){
+    console.error(error);
+  }
+}
+
+//displays the edit form
+async function editButtonClicked(product){
+  const existingEditForm = document.querySelector("#edit-form-container");
+  if(existingEditForm){
+    existingEditForm.remove();
+  }
+
+  document.body.append(editFormContainer);
+
+  //selecting DOM
+  const editProductForm = document.querySelector("#edit-product-form");
+  const cancelBtn = document.querySelector("#cancel-btn");
+
+  editProductForm.addEventListener("submit", async (event) => {
+    await updateData(event, product);
+    editFormContainer.remove();
+  });
+
+  cancelBtn.addEventListener("click", ()=>{
+    editFormContainer.remove();
+  })
+
+  editProductForm.name.value = product.name;
+  editProductForm.price.value = product.price;
+  editProductForm.rating.value = product.rating;
+  editProductForm.imageURL.value = product.image;
+  editProductForm.description.value = product.description;
+
+}
+
+async function updateData(event, product){
+  event.preventDefault();
+
+  const editProductForm = event.target;
+  
+  product.name = editProductForm.name.value;
+  product.price = editProductForm.price.value;
+  product.rating = editProductForm.rating.value;
+  product.image = editProductForm.imageURL.value;
+  product.description = editProductForm.description.value;
+
+  console.log(product);
+
+  try {
+
+    const response = await fetch(productsAPIUrl + `/product/${product.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+
+    console.log(response.status);
+    const result = await response.json();
+    console.log(result);
+
+    fetchProducts(productsAPIUrl);
+
+  } catch(error) {
     console.error(error);
   }
 }

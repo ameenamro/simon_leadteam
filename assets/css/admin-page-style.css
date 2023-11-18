@@ -1,14 +1,14 @@
 main{
-  margin-top: 190px;
+  margin-top: 90px;
+}
+
+body{
+  background-color: #FDFDFD;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-body{
-  background-color: #FDFDFD;
 }
 
 #list-of-products {
@@ -96,4 +96,21 @@ form{
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+#edit-form-container{
+  position: fixed;
+
+  height: calc(100vh - 80px);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+
+  background-color: white;
+  z-index: 1001;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  text-align: center;
 }

@@ -116,6 +116,39 @@
     </section>
   </main>
 
+  <section id="edit-form-container">
+    <h2>Edit Product</h2>
+    <form id="edit-product-form">
+      <label for="name">
+        Name:
+        <input type="text" name="name" id="name" required>
+      </label>
+     
+      <label for="price">
+        Price ($):
+        <input type="number" name="price" id="price" value="10" min="1" required>
+      </label>
+      
+      <label for="rating">
+        Rating:
+        <input type="number" name="rating" id="rating" value="4" min="0" max="5" step="0.1" required>
+      </label>
+
+      <label for="imageURL">
+        Image URL:
+        <input type="url" name="imageURL" id="imageURL" required>
+      </label>
+
+      <label for="description">
+        Description:
+        <textarea name="description" id="description" cols="30" rows="5"></textarea>
+      </label>
+
+      <button type="submit">Update</button>
+      <button id="cancel-btn">Cancel</button>
+    </form>
+  </section>
+
   <script src="../js/admin-page-script.js"></script>
 </body>
 

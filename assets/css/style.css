@@ -23,8 +23,9 @@
   #navbar{
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #FFFFFF;
-  
+    background-color: #ffffff;
+    height: 80px;
+
     position: fixed;
     top:0;
     width: 100vw;
@@ -57,6 +58,7 @@
   
   #search-section{
     width: 100px;
+    padding: 0;
     border-bottom: black solid 1px;
   }
   

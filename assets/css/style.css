@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+  }
   
   .flex-column{
     display: flex;
@@ -56,6 +61,12 @@
     padding: 10px;
   }
   
+  #navbar>h1:hover{
+    color: #777;
+    cursor: pointer;
+
+  }
+  
   #search-section{
     width: 100px;
     padding: 0;
@@ -92,7 +103,7 @@ gap: 3rem;
 align-items: center;
 text-align: center;
 cursor: pointer;
-margin-top: 150px;
+margin-top: 10vh;
 }
 
 .box
@@ -105,15 +116,18 @@ position: relative;
 background-color: burlywood;
 transition: all .35s ease;
 
+width: 10.5em;
+height: 15em;
 }
 
 
 .box img
 {
-width: 75%;
-height: auto;
+/* width: 75%; */
+width: 8em;
+height: 5em;
 
-
+object-fit:scale-down;
 }
 
 .box h4

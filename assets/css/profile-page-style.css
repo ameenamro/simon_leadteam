@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#order-history-container,
+#personal-info-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border: black 0.2em solid;
+  border-radius: 2em;
+  width: 90vw;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+button{
+  height: 3em;
+  width: 8em;
+
+  border-radius: 0.5em;
+  background-color: black;
+  color: white;
+  border: none;
+
+  cursor: pointer;
+}
+
+.history-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  gap: 10px;
+  
+  border: solid black 2px;
+
+  width: 80vw;
+}

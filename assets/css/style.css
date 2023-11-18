@@ -25,6 +25,10 @@
     
   }
   
+#top-spacing{
+  height: 80px;
+}
+
   #navbar{
     justify-content: space-between;
     padding: 20px 40px;

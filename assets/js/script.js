@@ -68,7 +68,7 @@ function displayProducts(products) {
         cartIcon.classList.add("bxs-cart");
         cartBtnSection.append(cartIcon);
         let name=product.name;       
-        await about_item(productSection);
+        await about_item(productSection,product);
 
 
     })
@@ -81,12 +81,11 @@ function displayProducts(products) {
 
 
 
-async function about_item(o) {
+async function about_item(o,product) {
 
 
     o.addEventListener('click', (e) => {
-        console.log(o);
-         localStorage.setItem('productSection',o);
+         localStorage.setItem('product',product.name);
         window.location.href="./assets/html/item.html";
     });
 

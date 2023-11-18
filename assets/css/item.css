@@ -23,8 +23,9 @@
   #navbar{
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #FFFFFF;
-  
+    background-color: #ffffff;
+    height: 80px;
+
     position: fixed;
     top:0;
     width: 100vw;
@@ -57,6 +58,7 @@
   
   #search-section{
     width: 100px;
+    padding: 0;
     border-bottom: black solid 1px;
   }
   
@@ -82,83 +84,137 @@ padding: 25px 2%;
 }
 
 
-.content
+
+.items
 {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px,auto));
-gap: 3rem;
-align-items: center;
-text-align: center;
-cursor: pointer;
-margin-top: 150px;
-}
 
-.box
-{
-padding: 0px 20px 10px 20px;
-background: transparent;
-box-shadow: 5px, 30px,56.1276px  rgba(26, 25, 25, 0.12);
-border-radius: 10px;
-position: relative;
-background-color: burlywood;
-transition: all .35s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px,auto));
+    gap: 1rem;
 
-}
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 150px;
 
-
-.box img
-{
-width: 75%;
-height: auto;
-
-
-}
-
-.box h4
-{
-font-size: 15px;
-letter-spacing: 1px;
-margin-bottom: 35px;
-
+    flex-wrap: wrap;
 
 
 }
 
 
-.box h5
+.photo
 {
-font-size: 14px;
-letter-spacing: 1px;
-margin-bottom: 10px;
+width:80vh ;
+display: flex;
+height:80vh ;
+flex-wrap: wrap;
 
 
 }
 
-.box .cart i
-{
-position: absolute;
-top :0;
-left:0;
-width: 35px;
-height: 35px;
-background:black;
-color: rgb(255, 251, 251);
-align-items: center;
-justify-content: center;
-font-size:18px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-border-bottom-left-radius: 4px;
-border-bottom-right-radius: 4px;
-}
 
-.box:hover
+
+.read
 {
-transform: translateY(-5px);
+    width:80vh ;
+    height:100vh ;
+
+display: flex;
+flex-wrap: wrap;
 
 }
+
+.my_check
+{
+margin-left:5vh;
+flex-wrap: wrap;
+
+}
+
+.my_check h4
+{
+
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+
+}
+
+
+.my_check h5
+{
+
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+
+}
+
+.my_check p
+{
+
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+
+}
+
+.my_check input
+{
+    margin-bottom: 25px;
+    width: 10vh;
+    height: 5vh;
+
+
+}
+
+.my_check button
+{
+    margin-bottom: 25px;
+    width: 42vh;
+    height: 6vh;
+    background-color: #121212;
+    border-radius: 10px;
+    color: #f7f7f7;
+   opacity:1 ;
+   transition: .4ms;
+
+}
+
+.my_check button:hover
+{
+    
+   opacity:.5 ;
+
+}
+label
+{
+
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about
 {
 background: #f7f7f7; 

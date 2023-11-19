@@ -10,6 +10,9 @@ logoutBtn.addEventListener("click",(e)=>{
 
 //check if logged in
 if(localStorage.role){
+    if(localStorage.role==="admin"){
+        window.location.href="./assets/html/admin-page.html";
+    }
     loginBtn.classList.add("display-none");
     logoutBtn.classList.remove("display-none");
   } else {

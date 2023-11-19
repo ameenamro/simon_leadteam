@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+  }
+  
+  #navbar{
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    height: 80px;
+
+    position: fixed;
+    top:0;
+    width: 100vw;
+  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     z-index:1000 ;
+    font-weight:600;
+  }
+  
+  .clickable-section{
+    padding: 5px 10px;
+    
+  }
+  .clickable-section:hover{
+    cursor: pointer;
+    color: #777;
+  }
+  
+  
+  #navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+  }
+  #navbar a:hover{
+    color: #777;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  #search-section{
+    width: 100px;
+    padding: 0;
+    border-bottom: black solid 1px;
+  }
+  
+  #search-section #search{
+    border: none;
+    width: 80px;
+    padding: 5px 0px;
+  }
+  #search-section #search:focus{
+    outline: none;
+  }
+  
+  .diplay-none{
+    display: none;
+  }
+
+
+section
+{
+padding: 25px 2%;
+
+
+}
+
+
+#loginAndRegisterForm {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin:10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+#loginForm
+{
+    text-align: left;
+    border: #2a2a2a 1px solid;
+    padding: 10rem;
+    padding-right:12.5rem;
+    border-radius: 10px;    
+}
+
+.container {
+    background-color: #fff;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.formregisterForm {
+    text-align: left;
+    border: #2a2a2a 1px solid;
+    padding: 10rem;
+    padding-right:12.5rem;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 115%;
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d2d2d2;
+    color: #2a2a2a;
+    transition: 1s;
+}
+
+#logoutButton {
+    background-color: black;
+    margin-top: 10px;
+    width: 20rem;
+}
+
+#logoutButton:hover {
+    background-color: rgb(214, 212, 212);
+    color: black;
+    transition: 1s;
+}
+.inValidMessage{
+    display: block;
+    color: red;
+}
+
+
+
+
+.about
+{
+background: #f7f7f7; 
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.about_content
+{
+
+text-align:center;
+
+
+
+}
+
+.about_content h2
+{
+font-size: 40px;
+margin-bottom:30px;
+
+
+}
+
+
+.about_content p
+{
+max-width:600px;
+font-size: 25px;
+font-weight: 600;
+color: #121212;
+line-height: 30px;
+
+}
+
+.contact
+{
+padding: 50px 17%;
+background: #121212;
+
+}
+.main_contact
+{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+gap: 1rem;
+margin-bottom:2rem ;
+
+}
+
+
+.contact_contact li
+{
+
+margin-bottom: 10px;
+list-style: none;
+
+}
+.contact_contact li a
+{
+display: block;
+color: #FFFFFF;
+font-size: 18px;
+font-weight: 600;
+text-decoration: none;
+transition: all .40s ease;
+}
+
+
+.contact_contact li:hover
+{
+  transform: translateX(-10px);  
+}
+
+
+.action form
+{
+text-align: center;
+
+
+}
+
+
+
+.action form input[type="email"]
+{
+width:460px ;
+max-width: 100%;
+padding: 12px 15px ;
+background: #515151;
+border: none;
+outline: none;
+margin: 0px 10px 20px  0px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+}
+
+.action form input[type="submit"]
+{
+padding: 12px 15px ;
+background: #515151;
+color:#FFFFFF ;
+border: none;
+outline: none;
+margin: 0px 10px 20px  0px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+}
+
+
+.last
+{
+text-align: center;
+padding: 17px;
+background: #757575;
+}
+.last p
+{
+font-size:15px;
+font-weight: 600;
+letter-spacing: 2px;
+}
+@media(max-width:800px)
+{
+#menu-icon
+{
+display: block;
+}
+
+header
+{
+padding: 15px 19%;
+
+}
+
+
+}
+

@@ -1,11 +1,20 @@
 //TO DO: CHECK IF LOGGED IN USER IS ADMIN, THEN DISPLAY THIS STUFF.
 //IF NOT LOGGED IN AS ADMIN REDIRECT TO INDEX.HTML IMMEDIATLEY
+if(localStorage.getItem("role")!=="admin"){
+  window.location.href="../html/login.html";
+}
 
 //Selecting DOM Elements
 const productsList = document.querySelector("#list-of-products");
 const newProductForm = document.querySelector("#new-product-form");
 const editFormContainer = document.querySelector("#edit-form-container");
 editFormContainer.remove();
+
+const logoutBtn = document.querySelector("#logout");
+logoutBtn.addEventListener("click",(e)=>{
+  localStorage.clear();
+  window.location.href="../html/login.html";
+})
 
 // document.body.append(editFormContainer)
 

@@ -1,3 +1,9 @@
+if(localStorage.role==="admin"){
+    window.location.href="../html/admin-page.html"
+} else if(localStorage.role==="user"){
+    window.location.href="../../index.html"
+}
+
 const productsAPIUrl = 'https://65572bb0bd4bcef8b6122d2f.mockapi.io'
 
 fetchProducts(productsAPIUrl);
@@ -115,6 +121,7 @@ async function about_item(admin,product) {
         if(admin===product.role)
         {
 
+            localStorage.setItem("role", "admin");
            window.location.href="../html/admin-page.html";
 
 
@@ -124,6 +131,7 @@ else
 {
 
     console.log("ameen");
+    localStorage.setItem("role", "user");
     window.location.href="../../index.html";
 
 

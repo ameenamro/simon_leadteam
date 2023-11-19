@@ -1,3 +1,22 @@
+const logoutBtn = document.querySelector("#logout");
+const loginBtn = document.querySelector("#user-section");
+console.log('loginBtn', loginBtn)
+
+logoutBtn.addEventListener("click",(e)=>{
+  localStorage.clear();
+  window.location.href="../html/login.html";
+})
+console.log("TEST");
+
+//check if logged in
+if(localStorage.role){
+    loginBtn.classList.add("display-none");
+    logoutBtn.classList.remove("display-none");
+  } else {
+    loginBtn.classList.remove("display-none");
+    logoutBtn.classList.add("display-none");
+  }
+
 item_name = localStorage.getItem('product');
 
 const about = document.querySelector(".content");

@@ -55,23 +55,14 @@ function displayProducts(products) {
             admin="admin";
             const inValidMessage = document.getElementById("inValidMessage");
 
-            if (email === validEmail && password === validPassword) {
-
-
-         if(admin===product.Role)
-         {
-
-            window.location.href="http://127.0.0.1:5500/simon_leadteam/assets/html/admin-page.html";
-
-
-         }
+            if (email === validEmail && password === validPassword) { 
 
                 const user = {
                     email: email,
                     password: password
                 };
 
-             about_item(user);
+             about_item(admin,product);
 
 
                 document.getElementById("loginForm").style.display = "none";
@@ -117,13 +108,29 @@ function displayProducts(products) {
 
 
 
-async function about_item(product) {
+async function about_item(admin,product) {
+    
 
 
+        if(admin===product.role)
+        {
+
+           window.location.href="../html/admin-page.html";
+
+
+        }
+
+else
+{
+
+    console.log("ameen");
+    window.location.href="../../index.html";
+
+
+
+}
     
-        console.log("ameen");
-        window.location.href="http://127.0.0.1:5500/simon_leadteam/index.html";
-    
+            
 
 
 }

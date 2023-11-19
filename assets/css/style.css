@@ -117,7 +117,7 @@ background: transparent;
 box-shadow: 5px, 30px,56.1276px  rgba(26, 25, 25, 0.12);
 border-radius: 10px;
 position: relative;
-background-color: burlywood;
+background-color: rgb(223, 222, 222);
 transition: all .35s ease;
 
 width: 10.5em;

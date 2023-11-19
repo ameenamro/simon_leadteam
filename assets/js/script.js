@@ -1,6 +1,22 @@
-
 //Selecting DOM Elements
 const grid = document.querySelector(".content");
+const logoutBtn = document.querySelector("#logout");
+const loginBtn = document.querySelector("#user-section");
+
+logoutBtn.addEventListener("click",(e)=>{
+  localStorage.clear();
+  window.location.href="./assets/html/login.html";
+})
+
+//check if logged in
+if(localStorage.role){
+    loginBtn.classList.add("display-none");
+    logoutBtn.classList.remove("display-none");
+  } else {
+    loginBtn.classList.remove("display-none");
+    logoutBtn.classList.add("display-none");
+  }
+
 const productsAPIUrl = 'https://65572f1fbd4bcef8b612350d.mockapi.io/shoestore'
 
 fetchProducts(productsAPIUrl);
